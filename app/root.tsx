@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import Navbar from "./Components/Navbar";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -33,12 +34,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Navbar />
+        <main className="max-2-6xl mx-auto px-6 my-8">
         {children}
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
   );
+}
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "The Funny Dev" },
+    { name: "description", content: "Welcome to my Website" },
+  ];
 }
 
 export default function App() {
