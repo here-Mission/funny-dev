@@ -5,7 +5,11 @@ export default [
     layout('./routes/layout/Main.tsx',[route('about','./routes/about/index.tsx'),
     route('contact','./routes/contact/index.tsx'),
     route('projects','./routes/projects/index.tsx'),
-     route('blog','./routes/blog/index.tsx'),]),
+     route('blog','./routes/blog/index.tsx'),
+     route('projects/:id','./routes/projects/details.tsx'),
+    
+    ]),
+
     
 
 ] satisfies RouteConfig;
