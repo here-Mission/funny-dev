@@ -8,3 +8,11 @@ export type Project={
     category: string,
     featured: string;
 };
+
+export type postMeta={
+    id: string;
+    slug: string;
+    title: string;
+    excerpt: string;
+    date: string;
+}
